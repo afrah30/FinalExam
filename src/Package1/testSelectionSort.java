@@ -16,6 +16,7 @@ public class testSelectionSort {
     @Test
     public void testNegatives() {
         SelectionSort sorter = new SelectionSort();
+        // second comment
         int[] arr = {-5, -2, -8, -1, -3};
         sorter.selectionSort(arr);
         int[] sortedArr = {-8, -5, -3, -2, -1};
