@@ -6,6 +6,7 @@ public class testSelectionSort {
 	@Test
 public void testPositives() {
 int[] arr = { 5, 2, 9, 1, 5 };
+// first comment
 SelectionSort.basicSelectionSort(arr);
 assertArrayEquals(new int[] { 1, 2, 5, 5, 9 }, arr);
 }
@@ -13,6 +14,7 @@ assertArrayEquals(new int[] { 1, 2, 5, 5, 9 }, arr);
 	@Test
 public void testNegatives() {
 int[] arr = { -5, -2, -9, -1, -5 };
+// second comment
 SelectionSort.basicSelectionSort(arr);
 assertArrayEquals(new int[] { -9, -5, -5, -2, -1 }, arr);
 }
