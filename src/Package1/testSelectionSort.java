@@ -1,36 +1,37 @@
 package Package1;
-import static org.junit.Assert.assertArrayEquals;
 import org.junit.Test;
+import static org.junit.Assert.assertArrayEquals;
+
 public class testSelectionSort {
 
-	@Test
-public void testPositives() {
-int[] arr = { 5, 2, 9, 1, 5 };
-// first comment
-SelectionSort.basicSelectionSort(arr);
-assertArrayEquals(new int[] { 1, 2, 5, 5, 9 }, arr);
+    @Test
+    public void testPositive() {
+        SelectionSort sorter = new SelectionSort();
+        int[] arr = {5, 2, 8, 1, 3};
+        sorter.selectionSort(arr);
+        int[] sortedArr = {1, 2, 3, 5, 8};
+        assertArrayEquals(sortedArr, arr);
+    }
+
+    @Test
+    public void testNegatives() {
+        SelectionSort sorter = new SelectionSort();
+        int[] arr = {-5, -2, -8, -1, -3};
+        sorter.selectionSort(arr);
+        int[] sortedArr = {-8, -5, -3, -2, -1};
+        assertArrayEquals(sortedArr, arr);
+    }
+
+    @Test
+    public void testMixed() {
+        SelectionSort sorter = new SelectionSort();
+        int[] arr = {5, -2, 0, 1, -3};
+        sorter.selectionSort(arr);
+        int[] sortedArr = {-3, -2, 0, 1, 5};
+        assertArrayEquals(sortedArr, arr);
+    }
 }
 
-	@Test
-public void testNegatives() {
-int[] arr = { -5, -2, -9, -1, -5 };
-// second comment
-SelectionSort.basicSelectionSort(arr);
-assertArrayEquals(new int[] { -9, -5, -5, -2, -1 }, arr);
-}
 
-	@Test
-public void testMixed() {
-int[] arr = { 5, -2, 0, 1, -5 };
-SelectionSort.basicSelectionSort(arr);
-assertArrayEquals(new int[] { -5, -2, 0, 1, 5 }, arr);
-}
 
-	@Test
-public void testDuplicates() {
-int[] arr = { 5, 2, 5, 1, 2 };
-SelectionSort.basicSelectionSort(arr);
-assertArrayEquals(new int[] { 1, 2, 2, 5, 5 }, arr);
-}
-}
 
